@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown, Phone } from 'lucide-react'
 
-export function LandingPageComponent() {
+export function LandingPage() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
 
   return (
@@ -82,7 +82,8 @@ export function LandingPageComponent() {
                   <ul className="list-disc pl-6">
                     <li>Vas a quedar muy bien con el propietario.</li>
                     <li>Te vas a ahorrar un montón de visitas improductivas.</li>
-                    <li>El propietario estará contento porque ve que llevas a gente que como mínimo tiene cierto interés y no hace una de esas visitas que solo pasar por la puerta dicen '"uyyy no"'.</li>
+                    <li>  {"El propietario estará contento porque ve que llevas a gente que como mínimo tiene cierto interés y no hace una de esas visitas que solo pasar por la puerta dicen '\"uyyy no\"'."}
+                    </li>
                   </ul>
                 </>
               }
