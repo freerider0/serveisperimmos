@@ -153,7 +153,7 @@ export function LandingPage() {
   )
 }
 
-function FeatureCard({ title, description, icon }) {
+function FeatureCard({ title, description, icon }: { title: string, description: React.ReactNode, icon: React.ReactNode }) {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
