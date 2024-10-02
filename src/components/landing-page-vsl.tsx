@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { CheckCircle, Camera, Home, Phone, Menu, X, ArrowRight, Shield } from 'lucide-react'
 import ReactPlayer from 'react-player'
-import Link from 'next/link'
 import ResponsiveLogo from './design/logo'
 
 export function LandingPageVsl() {
@@ -162,6 +161,55 @@ export function LandingPageVsl() {
             </Button>
           </motion.div>
         </section>
+
+
+        <section id="garantia" className="py-20 bg-gradient-to-r from-blue-900 to-teal-900">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold mb-16 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-600">Cosas que pueden hacerte valorar trabjar conmigo</h2>
+            <div className="max-w-3xl mx-auto bg-gray-800 p-8 rounded-lg shadow-xl">
+              <div className="flex items-center justify-center mb-8">
+                <Shield className="h-16 w-16 text-teal-400" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-4 text-center text-white">Si decides empezar a trabajar conmigo ahora tienes todos estos beneficios</h3>
+             
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-teal-400 mr-2 flex-shrink-0 mt-1" />
+                  <span className="text-gray-300">No solo tenemos los mejores precios del sector con muy buena calidad.</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-teal-400 mr-2 flex-shrink-0 mt-1" />
+                  <span className="text-gray-300">Posiblidad de facturar directamente al propietaro por la totalidad del importe en concepto de certificado energetico, el servicio te sale gratis o incluso puedes agregar una comisión del importe que tu desees.</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-teal-400 mr-2 flex-shrink-0 mt-1" />
+                  <span className="text-gray-300">En una sola visita obtienes todo el material que necesitas para empezar a vender la propiedad, tanto arquitectotnicos como de markqueting.</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-teal-400 mr-2 flex-shrink-0 mt-1" />
+                  <span className="text-gray-300">La confiaza se tiene que ganar, por ello te ofrezco el primer servicio que me encargas totalmente gratis</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-teal-400 mr-2 flex-shrink-0 mt-1" />
+                  <span className="text-gray-300">Obten una de las 10 plazas disponibles, una vez cubiertas mantendre el servicio per el precio subira para los nuevos miembros</span>
+                </li>
+                
+              </ul>
+              <div className="text-center">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 text-white text-lg px-8 py-4 rounded-full"
+                  onClick={() => setIsModalOpen(true)}
+                >
+                  Comienza con confianza
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
 
         <section id="servicios" className="py-20 bg-gray-900">
           <div className="container mx-auto px-4">
