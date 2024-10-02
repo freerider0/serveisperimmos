@@ -6,8 +6,11 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { CheckCircle, Camera, Home, Phone, Menu, X, ArrowRight, Shield } from 'lucide-react'
+import ReactPlayer from 'react-player'
+import Link from 'next/link'
+import ResponsiveLogo from './design/logo'
 
-export default function LandingPage() {
+export function LandingPageVsl() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('inicio')
@@ -42,9 +45,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
       <header className="fixed w-full z-50 bg-gray-900 bg-opacity-90 backdrop-blur-md">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <a href="#" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-600">
-            InmoServices
-          </a>
+          <ResponsiveLogo />
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <a
@@ -112,7 +113,7 @@ export default function LandingPage() {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight"
             >
-              Descubre el Poder de <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-600">InmoServices</span>
+              Es provable que lo que tengo que proponerte aporte un granito de arena en alegrarte el dia,  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-600">descubre por què?</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -124,15 +125,25 @@ export default function LandingPage() {
             </motion.p>
           </div>
           <div className="w-full max-w-4xl mx-auto px-4 mb-12">
-            <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-2xl">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/your-video-id"
-                title="InmoServices Video de Presentación"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+            <div className="rounded-lg overflow-hidden shadow-2xl">
+            <div className="w-full max-w-4xl mx-auto px-4">
+            <div className="rounded-lg aspect-w-16 aspect-h-9  overflow-hidden shadow-2xl">
+              <ReactPlayer
+                url="https://www.youtube.com/watch?v=HPL0rvE-vkA"
+                width="100%"
+                height="100%"
+                controls={true}
+                playing={false}
+                light={false}
+                config={{
+                  youtube: {
+                    playerVars: { showinfo: 1 }
+                  }
+                }}
+              />
+            </div>
+          </div>
+            
             </div>
           </div>
           <motion.div
@@ -170,6 +181,26 @@ export default function LandingPage() {
                 {
                   title: "Fotos Profesionales",
                   description: "Imágenes que atraen y destacan tu propiedad.",
+                  icon: <Camera className="h-12 w-12 text-blue-400 mb-4" />
+                },
+                {
+                  title: "Plano comercial",
+                  description: "Planos que los compradores entienden y son visualmente atractivos.",
+                  icon: <Camera className="h-12 w-12 text-blue-400 mb-4" />
+                },
+                {
+                  title: "Video visita",
+                  description: "Un video mostrando la casa de forma continua, como si estuvieramos vistando la propiedad juntos.",
+                  icon: <Camera className="h-12 w-12 text-blue-400 mb-4" />
+                },
+                {
+                  title: "Cédula de habitabilidad",
+                  description: "Un documento que demuestra que la vivienda cumple con los estándares de habitabilidad mínimos exigidos por la ley.",
+                  icon: <Camera className="h-12 w-12 text-blue-400 mb-4" />
+                },
+                {
+                  title: "Subida a tu CRM",
+                  description: "Subimos todos los documentos a tu CRM para que puedas tener todo en un solo lugar.",
                   icon: <Camera className="h-12 w-12 text-blue-400 mb-4" />
                 }
               ].map((service, index) => (

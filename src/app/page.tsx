@@ -1,7 +1,8 @@
-import {LandingPage} from "@/components/landing-page";
+import {LandingPageVsl} from "@/components/landing-page-vsl";
+
 
 export default function Home() {
   return (
-    <LandingPage />
+    <LandingPageVsl />
   );
 }
